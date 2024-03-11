@@ -1,9 +1,17 @@
 package org.example;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class PlayerCharacterTest {
+
+    @BeforeEach
+    void resetXY() {
+        PlayerCharacter.X = 0;
+        PlayerCharacter.Y = 0;
+    }
 
     @Test
     void getX_returnNull_whenTheGameStarted() {
