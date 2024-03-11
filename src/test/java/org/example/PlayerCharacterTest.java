@@ -25,4 +25,13 @@ class PlayerCharacterTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void move_returnYEquals1_whenWClicked() {
+        //GIVEN
+        String input = "W";
+        //WHEN
+        boolean actual = PlayerCharacter.move(input);
+        //THEN
+        Assertions.assertTrue(actual);
+    }
 }
