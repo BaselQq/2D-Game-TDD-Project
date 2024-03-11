@@ -15,13 +15,39 @@ public class PlayerCharacter {
 
     public static boolean move(String input) {
         if (input.equals("W")) {
-            Y = Y+1;
-       }
+            Y = Y + 1;
+        }
 
-        if (Y==1) {
+        if (Y == 1) {
+            return true;
+        }
+
+        if (input.equals("S")) {
+            Y = Y -1;
+        }
+
+        if (Y == -1) {
+            return true;
+        }
+
+        if (input.equals("D")) {
+            X = X + 1;
+        }
+
+        if (X == 1) {
+            return true;
+        }
+
+        if (input.equals("A")) {
+            X = X -1;
+        }
+
+        if (X == -1) {
             return true;
         }
 
         return false;
     }
+
+
 }

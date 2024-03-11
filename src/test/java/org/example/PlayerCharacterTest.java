@@ -26,9 +26,38 @@ class PlayerCharacterTest {
     }
 
     @Test
-    void move_returnYEquals1_whenWClicked() {
+    void move_returnTrueY_whenWClicked() {
         //GIVEN
         String input = "W";
+        //WHEN
+        boolean actual = PlayerCharacter.move(input);
+        //THEN
+        Assertions.assertTrue(actual);
+    }
+
+    @Test
+    void move_returnTrue_whenSClicked() {
+        //GIVEN
+        String input = "S";
+        //WHEN
+        boolean actual = PlayerCharacter.move(input);
+        //THEN
+        Assertions.assertTrue(actual);
+    }
+
+    @Test
+    void move_returnTrue_whenDClicked() {
+        //GIVEN
+        String input = "D";
+        //WHEN
+        boolean actual = PlayerCharacter.move(input);
+        //THEN
+        Assertions.assertTrue(actual);
+    }
+    @Test
+    void move_returnTrue_whenAClicked() {
+        //GIVEN
+        String input = "A";
         //WHEN
         boolean actual = PlayerCharacter.move(input);
         //THEN
